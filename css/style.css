@@ -311,7 +311,7 @@ body {
 .single-team .team-imgs {
     height: 130px;
     width: 130px;
-    background: #191c24;
+    background: #0f1015;
     position: relative;
     border-radius: 50% 50% 35px 50%;
     overflow: hidden;
@@ -322,7 +322,7 @@ body {
 
 .single-team .team-imgs::before {
     content: "";
-    background: #191c24;
+    background: ##0f1015;
     position: absolute;
     top: 0;
     left: 0;
