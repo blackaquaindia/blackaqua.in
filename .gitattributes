@@ -1,1 +1,2 @@
 AddType text/plain .php
+*.php text
