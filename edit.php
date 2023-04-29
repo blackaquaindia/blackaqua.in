@@ -1,23 +1,19 @@
 <?php
-$file = "example.txt"; // replace "example.txt" with the name of your text file
+// Set the path to your file
+$file_path = 'example.txt';
 
-if(isset($_POST['content'])) {
-    $content = $_POST['content'];
-    file_put_contents($file, $content);
+// Read the contents of the file
+$file_contents = file_get_contents($file_path);
+
+// Create an HTML form with a textarea to display the contents of the file
+echo '<form method="post">';
+echo '<textarea name="file_contents" rows="10" cols="80">' . htmlspecialchars($file_contents) . '</textarea>';
+echo '<input type="submit" value="Save">';
+echo '</form>';
+
+// Check if the form has been submitted and save the contents of the textarea back to the file
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $new_file_contents = $_POST['file_contents'];
+    file_put_contents($file_path, $new_file_contents);
 }
-$text = file_get_contents($file);
 ?>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Edit Text File</title>
-</head>
-<body>
-    <h1>Edit Text File</h1>
-    <form method="post">
-        <textarea name="content" rows="10" cols="50"><?php echo htmlspecialchars($text); ?></textarea><br><br>
-        <input type="submit" value="Save">
-    </form>
-</body>
-</html>
