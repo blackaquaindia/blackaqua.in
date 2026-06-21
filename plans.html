@@ -274,7 +274,6 @@ input:focus{
 </style>
 </head>
 <body>
-<a href="upi://pay?pa=9175859586@ptsbi&pn=ABHIJEET DHANANJAY AGHARKAR&cu=INR" id="__UPI_BUTTON__" style="background: #ff912f;border: 2px solid #8a4100;padding: 10px;text-decoration: none;color: white;font-size: larger;border-radius: 10px;">Pay using UPI</a>
 
 <div class="container">
 
@@ -292,7 +291,7 @@ input:focus{
             <div class="plan-header">
                 <div class="badge">STARTER PLAN</div>
 
-                <div class="price">₹15</div>
+                <div class="price">₹1500</div>
                 <div class="month">/ Month</div>
             </div>
 
@@ -311,7 +310,7 @@ input:focus{
             </div>
 
             <button class="select-btn"
-                onclick="selectPlan('Starter Plan',15)">
+                onclick="selectPlan('Starter Plan',1500)">
                 Select Plan
             </button>
         </div>
@@ -324,7 +323,7 @@ input:focus{
                     ⭐ BEST VALUE
                 </div>
 
-                <div class="price">₹33</div>
+                <div class="price">₹3333</div>
                 <div class="month">/ Month</div>
 
             </div>
@@ -346,7 +345,7 @@ input:focus{
             </div>
 
             <button class="select-btn"
-                onclick="selectPlan('Multi Post Plan',33)">
+                onclick="selectPlan('Multi Post Plan',3333)">
                 Select Plan
             </button>
 
@@ -362,7 +361,7 @@ input:focus{
 
         <div class="selected-plan">
             <h3 id="planName">Starter Plan</h3>
-            <div class="amount" id="planAmount">₹15</div>
+            <div class="amount" id="planAmount">₹1500</div>
         </div>
 
         <div class="form-group">
@@ -422,7 +421,7 @@ const UPI_ID = "9175859586@ptsbi";
 const WHATSAPP = "919175859586";
 
 let selectedPlan = "Starter Plan";
-let selectedAmount = 15;
+let selectedAmount = 15.00;
 
 function selectPlan(plan,amount){
 
@@ -463,7 +462,10 @@ function payNow(){
 
     const upi =
     `upi://pay?pa=${UPI_ID}`+
-    `&pn=Abhijeet Dhananjay Agharkar`;
+    `&pn=Black Aqua India Pvt Ltd`+
+    `&am=${selectedAmount}`+
+    `&cu=INR`+
+    `&tn=${encodeURIComponent(note)}`;
 
     window.location.href = upi;
 }
