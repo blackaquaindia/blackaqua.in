@@ -1,34 +1,484 @@
 <!DOCTYPE html>
-<html>
-    
-    <head>
-        <title>
-            Instagram Subscription Plans- BlackAqua.In
-        </title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <meta name="msapplication-tap-highlight" content="yes">
-        <!-- Enable all requests, inline styles, and eval() -->
-        
-      <meta name="format-detection" content="telephone=no">
-      <meta property="og:type" content="profile" />
-      <meta property="og:title" content="Instagram Subscription Plans - BlackAqua.In" />
-      <meta property="og:description" content="Black Aqua India Pvt. Ltd. - A Digital Marketing Company - We Provide Worldwide Marketing Solution For Facebook, Instagram, Twitter, Youtube, Whatsapp, Google and Many More.../>
-      <meta property="og:url" content="http://www.blackaqua.in/"/>
-      <meta property="og:image" itemprop="image" content="" />
-      <meta property="og:image:width" content="100%">
-      <meta property="og:image:height" content="100%">
-      <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="Black Aqua" />
-      <meta name="author" content="Abhijeet Agharkar">
-      <link itemprop="thumbnailUrl" href="" />
-     </head>
-    
-    <body>
-<center>
-<div id="zf-widget-root-id"></div> <script type="text/javascript" src='https://js.zohostatic.com/books/zfwidgets/assets/js/zf-widget.js'></script> <script> var pricingTableComponentOptions = { id: 'zf-widget-root-id', product_id: '2-f65765471b6c9c582bc791190032fe1a13c21bedeb7157ab76f5ae3acbb8aec6bbc326a9fe15d1ff58bcad6fd428a6fdb1e5c4b188e259095eb36ff696767231', template: 'solo', most_popular_plan: '', is_group_by_frequency: false, isFrequencyDropdown: false, isCurrencyDropdown: false, can_show_plan_freq: true, pricebooks: [ { pricebook_id: '1404494000000011001', currency_code: 'INR', currency_symbol: 'Rs.', plans: [ { plan_code: 'IG1144', url: 'https://my.blackaqua.in/subscribe/b1e5c4b188e25909355807d057523a0079bc88ff48c14354ad482bf477cf719e/IG1144', recurring_price: '1144', recurring_price_formatted: 'Rs.1,144.00', hp_settings_id: '1404494000000024003' }, ] }, ], group_options: [ ], plans: [ { plan_code: 'IG1144', selectedAddons: [ ] }, ], theme: { color: '#33BC54', theme_color_light: ''}, button_text: 'Subscribe', product_url: 'https://my.blackaqua.in', price_caption: 'LOGIN REQURED', language_code: 'en', open_inSameTab: false }; ZFWidget.init('zf-pricing-table', pricingTableComponentOptions); </script>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>InfluensorOS Payment</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --blue:#3b82f6;
+    --purple:#a855f7;
+    --bg:#050816;
+    --card:#0f172a;
+    --text:#ffffff;
+    --muted:#94a3b8;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:
+    radial-gradient(circle at top left,#1e3a8a 0%,transparent 30%),
+    radial-gradient(circle at top right,#7e22ce 0%,transparent 30%),
+    #050816;
+
+    color:white;
+    min-height:100vh;
+    padding:40px 20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:15px;
+}
+
+.logo h1{
+    font-size:70px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:var(--purple);
+}
+
+.subtitle{
+    text-align:center;
+    color:var(--muted);
+    margin-bottom:50px;
+    letter-spacing:3px;
+}
+
+.pricing{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+    margin-bottom:50px;
+}
+
+.plan-card{
+    background:rgba(255,255,255,0.03);
+    backdrop-filter:blur(20px);
+    border-radius:25px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.08);
+    transition:.3s;
+}
+
+.plan-card:hover{
+    transform:translateY(-8px);
+}
+
+.plan-header{
+    padding:25px;
+    text-align:center;
+}
+
+.starter{
+    border:1px solid rgba(59,130,246,.4);
+}
+
+.multi{
+    border:1px solid rgba(168,85,247,.4);
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 20px;
+    border-radius:50px;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.starter .badge{
+    background:var(--blue);
+}
+
+.multi .badge{
+    background:var(--purple);
+}
+
+.price{
+    font-size:72px;
+    font-weight:800;
+}
+
+.month{
+    color:var(--muted);
+}
+
+.features{
+    padding:25px;
+}
+
+.features li{
+    list-style:none;
+    padding:10px 0;
+    border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.select-btn{
+    width:100%;
+    border:none;
+    padding:18px;
+    cursor:pointer;
+    font-size:17px;
+    font-weight:700;
+    color:white;
+}
+
+.starter .select-btn{
+    background:var(--blue);
+}
+
+.multi .select-btn{
+    background:var(--purple);
+}
+
+.payment-box{
+    max-width:700px;
+    margin:auto;
+    background:rgba(255,255,255,.04);
+    backdrop-filter:blur(25px);
+    border-radius:25px;
+    padding:35px;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.payment-title{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.payment-title h2{
+    font-size:36px;
+}
+
+.selected-plan{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.selected-plan h3{
+    font-size:28px;
+}
+
+.selected-plan .amount{
+    font-size:52px;
+    font-weight:800;
+    margin-top:10px;
+}
+
+.form-group{
+    margin-bottom:18px;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    font-size:14px;
+}
+
+input{
+    width:100%;
+    padding:16px;
+    border-radius:12px;
+    border:none;
+    background:#111827;
+    color:white;
+    font-size:15px;
+}
+
+input:focus{
+    outline:none;
+    border:1px solid var(--blue);
+}
+
+.pay-btn{
+    width:100%;
+    padding:18px;
+    border:none;
+    border-radius:14px;
+    font-size:18px;
+    font-weight:700;
+    cursor:pointer;
+    color:white;
+    background:linear-gradient(90deg,var(--blue),var(--purple));
+    margin-top:10px;
+}
+
+.whatsapp-btn{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:14px;
+    margin-top:15px;
+    background:#25D366;
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+    font-weight:700;
+}
+
+.trust{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+}
+
+.trust-box{
+    background:rgba(255,255,255,.04);
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.footer{
+    margin-top:40px;
+    text-align:center;
+    color:var(--muted);
+}
+
+@media(max-width:768px){
+
+.logo h1{
+    font-size:42px;
+}
+
+.price{
+    font-size:56px;
+}
+
+.selected-plan .amount{
+    font-size:40px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="logo">
+        <h1>INFLUENSOR<span>OS</span></h1>
+    </div>
+
+    <div class="subtitle">
+        INSTAGRAM ENGAGEMENT AUTOMATION
+    </div>
+
+    <div class="pricing">
+
+        <div class="plan-card starter">
+            <div class="plan-header">
+                <div class="badge">STARTER PLAN</div>
+
+                <div class="price">₹1500</div>
+                <div class="month">/ Month</div>
+            </div>
+
+            <div class="features">
+                <li>✔ 1 Post Per Day</li>
+                <li>✔ Only New Posts</li>
+                <li>✔ Likes</li>
+                <li>✔ Comments</li>
+                <li>✔ GIF Comments</li>
+                <li>✔ Shares</li>
+                <li>✔ Saves</li>
+                <li>✔ Reposts</li>
+                <li>✔ Story Likes</li>
+                <li>✔ Story Views</li>
+                <li>✔ Profile Visits</li>
+            </div>
+
+            <button class="select-btn"
+                onclick="selectPlan('Starter Plan',1500)">
+                Select Plan
+            </button>
+        </div>
+
+        <div class="plan-card multi">
+
+            <div class="plan-header">
+
+                <div class="badge">
+                    ⭐ BEST VALUE
+                </div>
+
+                <div class="price">₹3333</div>
+                <div class="month">/ Month</div>
+
+            </div>
+
+            <div class="features">
+
+                <li>✔ Multi Post Per Day</li>
+                <li>✔ New + Old Posts</li>
+                <li>✔ Likes</li>
+                <li>✔ Comments</li>
+                <li>✔ GIF Comments</li>
+                <li>✔ Shares</li>
+                <li>✔ Saves</li>
+                <li>✔ Reposts</li>
+                <li>✔ Story Likes</li>
+                <li>✔ Story Views</li>
+                <li>✔ Profile Visits</li>
+
+            </div>
+
+            <button class="select-btn"
+                onclick="selectPlan('Multi Post Plan',3333)">
+                Select Plan
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="payment-box">
+
+        <div class="payment-title">
+            <h2>Complete Your Payment</h2>
+        </div>
+
+        <div class="selected-plan">
+            <h3 id="planName">Starter Plan</h3>
+            <div class="amount" id="planAmount">₹1500</div>
+        </div>
+
+        <div class="form-group">
+            <label>Name</label>
+            <input id="name" placeholder="Your Name">
+        </div>
+
+        <div class="form-group">
+            <label>Instagram Username</label>
+            <input id="username" placeholder="@username">
+        </div>
+
+        <div class="form-group">
+            <label>WhatsApp Number</label>
+            <input id="phone" placeholder="9876543210">
+        </div>
+
+        <button class="pay-btn" onclick="payNow()">
+            Pay Now With UPI
+        </button>
+
+        <button class="whatsapp-btn" onclick="support()">
+            WhatsApp Support
+        </button>
+
+    </div>
+
+    <div class="trust">
+
+        <div class="trust-box">
+            🔒 100% Safe
+        </div>
+
+        <div class="trust-box">
+            🚀 Real Engagement
+        </div>
+
+        <div class="trust-box">
+            ⚡ 24/7 Automated
+        </div>
+
+        <div class="trust-box">
+            💬 WhatsApp Support
+        </div>
+
+    </div>
+
+    <div class="footer">
+        Powered By Black Aqua India Pvt Ltd
+    </div>
+
+</div>
+
+<script>
+
+const UPI_ID = "blackaqua@okicici";
+const WHATSAPP = "919999999999";
+
+let selectedPlan = "Starter Plan";
+let selectedAmount = 1500;
+
+function selectPlan(plan,amount){
+
+    selectedPlan = plan;
+    selectedAmount = amount;
+
+    document.getElementById("planName").innerText = plan;
+    document.getElementById("planAmount").innerText = "₹" + amount;
+
+    document.querySelector(".payment-box")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+}
+
+function payNow(){
+
+    const name =
+        document.getElementById("name").value;
+
+    const username =
+        document.getElementById("username").value;
+
+    const phone =
+        document.getElementById("phone").value;
+
+    if(!name || !username || !phone){
+
+        alert(
+            "Please fill all details."
+        );
+
+        return;
+    }
+
+    const note =
+    `InfluensorOS ${selectedPlan} | ${username}`;
+
+    const upi =
+    `upi://pay?pa=${UPI_ID}`+
+    `&pn=Black Aqua India Pvt Ltd`+
+    `&am=${selectedAmount}`+
+    `&cu=INR`+
+    `&tn=${encodeURIComponent(note)}`;
+
+    window.location.href = upi;
+}
+
+function support(){
+
+    window.open(
+        `https://wa.me/${WHATSAPP}`,
+        "_blank"
+    );
+}
+
+</script>
+
 </body>
 </html>
