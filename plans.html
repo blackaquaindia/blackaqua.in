@@ -462,8 +462,7 @@ function payNow(){
 
     const upi =
     `upi://pay?pa=${UPI_ID}`+
-    `&am=${selectedAmount}`+
-    `&tn=${encodeURIComponent(note)}`;
+    `&pn=Abhijeet Dhananjay Agharkar`;
 
     window.location.href = upi;
 }
